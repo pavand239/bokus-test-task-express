@@ -2,4 +2,27 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  table(class='table table-bordered')
+    thead
+      tr
+        th Автор
+        th Возраст
+        th Название
+        th Год
+    tbody
+      each user in users
+        tr
+          th(scope='row',rowspan=user.books.length)=user.name
+          th(scope='row',rowspan=user.books.length)=user.old
+          each book, idx in user.books
+            if idx>0
+              tr
+                td=book.title
+                td=book.year
+            else
+              td=book.title
+              td=book.year
+
+            
+            
+
