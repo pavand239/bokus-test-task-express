@@ -10,11 +10,14 @@ const fetchData = async (req, res, next) => {
   req.data = data;
   next();
 };
-
+const renderTable = (req, res) => {
+  let { user, book } = req.data;
+  res.render('index', {user, book});
+};
 /* GET home page. */
-router.get('/', fetchData, (req, res, next) => {
-  console.log(req.data);
-  res.render('index', { title: 'My first express app' });
-});
+router.get('/', 
+  fetchData,
+  renderTable
+);
 
 export default router;
