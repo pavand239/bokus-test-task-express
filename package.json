@@ -15,8 +15,9 @@
     "presets": [
       "@babel/preset-env"
     ],
-    "plugins":[
-      ["@babel/plugin-transform-runtime",
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
         {
           "regenerator": true
         }
@@ -50,6 +51,6 @@
     "morgan": "~1.9.1",
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.2",
-    "pug": "2.0.0-beta11"
+    "pug": "^2.0.4"
   }
 }
