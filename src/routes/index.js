@@ -18,7 +18,6 @@ const renderTable = (req, res) => {
     books = Object.values(book);
   // для каждого объекта user создается свойтво - массив книг этого user  с помощью filter
   users.forEach(user => user.books = books.filter(book => book.uid === user.uid)); 
-  console.log(users);
   res.render('index', 
               {
                 title:'Bokus Test Task ExpressJS',
